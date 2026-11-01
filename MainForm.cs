@@ -203,7 +203,7 @@ namespace FunctionAnalyzerMono
                 string headline = ResultHeadline(result.Status, result.Message);
                 extremeSummary.Text = result.HasPoint
                     ? headline + Environment.NewLine +
-                        "x* = " + F(result.X) + "; f(x*) = " + F(result.FX) + Environment.NewLine +
+                        "x* = " + F(result.X) + "; y = f(x*) = " + F(result.FX) + Environment.NewLine +
                         "Интервал: [" + F(result.A) + "; " + F(result.B) + "]; длина = " + F(result.Width)
                     : headline;
             }
@@ -235,7 +235,7 @@ namespace FunctionAnalyzerMono
                 string headline = ResultHeadline(result.Status, result.Message);
                 rootSummary.Text = result.HasPoint
                     ? headline + Environment.NewLine +
-                        "x* = " + F(result.X) + "; f(x*) = " + F(result.FX) +
+                        "x* = " + F(result.X) + "; y = f(x*) = " + F(result.FX) +
                         "; |f(x*)| = " + F(Math.Abs(result.FX)) + Environment.NewLine +
                         "Интервал: [" + F(result.A) + "; " + F(result.B) +
                         "]; оценка ошибки x ≤ " + F(result.ArgumentBound)
